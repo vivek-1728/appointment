@@ -17,9 +17,13 @@ app.use((req, res, next) => {
 
 // CORS Configuration for Production
 app.use(cors({
-  origin: [
-    "https://client-q1z759bd7-kappativivekananda-7002s-projects.vercel.app"
-  ],
+  origin: function (origin, callback) {
+    if (!origin || origin.includes('vercel.app') || origin.includes('localhost')) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true
 }));
 
