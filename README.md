@@ -31,7 +31,7 @@ In the `server` directory, open `.env` and configure your settings:
 ```env
 PORT=5000
 MONGODB_URI=mongodb://127.0.0.1:27017/appointment-system  # Replace with your MongoDB Atlas URI if needed
-JWT_SECRET=supersecretjwtkey_123456
+JWT_SECRET=superkey
 ```
 
 ### 3. Seed Initial Admin Account
