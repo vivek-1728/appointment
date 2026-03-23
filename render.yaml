@@ -1,10 +1,15 @@
+version: "1"
 services:
   - type: web
-    name: appointment-system-backend
-    env: node
+    name: appointment
+    runtime: node
     rootDir: server
+    repo: https://github.com/vivek-1728/appointment
+    plan: free
+    region: oregon
     buildCommand: npm install
     startCommand: node index.js
+    autoDeployTrigger: commit
     envVars:
       - key: NODE_ENV
         value: production
