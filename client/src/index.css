@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --color-royal-blue: #001524;
+  --color-royal-gold: #D4AF37;
+  --color-royal-light: #F8F9FA;
+  --color-royal-dark: #1A1A24;
+}
+
+@layer base {
+  body {
+    @apply bg-royal-light text-royal-blue dark:bg-royal-dark dark:text-royal-light antialiased;
+  }
+}
